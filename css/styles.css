@@ -26,10 +26,10 @@ main {
 .nav-pills {
   /* Active state (selected pill) */
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #FF7A00;
+  --bs-nav-pills-link-active-bg: #ff7a00;
 
   /* Inactive state (unselected pills) */
-  --bs-nav-link-color: #FF7A00;
+  --bs-nav-link-color: #ff7a00;
   --bs-nav-link-hover-color: #cc6200;
 }
 
@@ -39,8 +39,8 @@ main {
 
 .btn-primary {
   /* Normal state */
-  --bs-btn-bg: #FF7A00;
-  --bs-btn-border-color: #FF7A00;
+  --bs-btn-bg: #ff7a00;
+  --bs-btn-border-color: #ff7a00;
   --bs-btn-color: #fff; /* Text color */
 
   /* Hover state */
@@ -59,40 +59,39 @@ main {
 
 /* If using Bootstrap's contextual background class on a badge */
 .badge.bg-primary {
-  background-color: #FF7A00 !important;
+  background-color: #ff7a00 !important;
   color: #fff;
 }
 
 /* Or if you want to override the badge component variables directly */
 .badge {
-  --bs-badge-bg: #FF7A00;
+  --bs-badge-bg: #ff7a00;
   --bs-badge-color: #fff;
 }
 
 .text-bg-primary {
-  background-color: #FF7A00 !important;
+  background-color: #ff7a00 !important;
   color: #fff !important;
 }
 
 /* This updates all standard Bootstrap progress bars to your orange */
 .progress-bar {
-  --bs-progress-bar-bg: #FF7A00;
+  --bs-progress-bar-bg: #ff7a00;
 }
 
 /* Safety override: If you are using <div class="progress-bar bg-primary"> */
 .progress-bar.bg-primary {
-  background-color: #FF7A00 !important;
+  background-color: #ff7a00 !important;
 }
-
 
 /* Force the exact orange onto your existing progress bar fill */
 .progress-bar.bg-primary {
-  background-color: #FF7A00 !important;
+  background-color: #ff7a00 !important;
 }
 
 /*  Optional: If your progress bar uses the default color without a bg-* utility */
 .progress-bar {
-  background-color: #FF7A00 !important;
+  background-color: #ff7a00 !important;
 }
 
 .detail-header {
@@ -116,7 +115,6 @@ main {
   transform: scale(1.025);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
-
 
 .signin {
   min-height: 100vh; /* Ensures the background covers the full page height */
