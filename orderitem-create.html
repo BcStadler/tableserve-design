@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TableServe — New Order Item</title>
+    <title>TableServe — Edit Order Item</title>
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -11,11 +11,90 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    {{> header}}
+    {{>header}}
     <main class="d-flex">
-      {{> nav}}
+      {{>nav}}
       <section class="content p-4 flex-grow-1">
-        <!-- build your page content here — refer to _data.md for data -->
+        <form class="form w-100">
+          <div>
+            <div
+              class="d-flex justify-content-between pb-4 mb-5 border-bottom border-2"
+            >
+              <h5 class="form-label"><strong>Edit Order Item</strong></h5>
+            </div>
+
+            <div class="mb-4 w-75">
+              <label for="menu-item" class="form-label">Menu Item</label>
+              <select id="menu-item" class="form-select">
+                <option value="">Select a menu item</option>
+                <option value="1">Grilled Chicken</option>
+                <option value="2" selected>Roasted Salmon</option>
+                <option value="3">Garden Salad</option>
+                <option value="4">Wood-Fired Pizza</option>
+              </select>
+            </div>
+
+            <div class="row g-3 mb-4 w-75">
+              <div class="col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input
+                  id="price"
+                  type="text"
+                  class="form-control"
+                  value="$24.99"
+                  readonly
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input
+                  id="quantity"
+                  type="number"
+                  class="form-control"
+                  value="2"
+                  min="1"
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="amount" class="form-label">Amount</label>
+                <input
+                  id="amount"
+                  type="text"
+                  class="form-control"
+                  value="$49.98"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="mb-5 w-75">
+              <label for="notes" class="form-label">Notes</label>
+              <input
+                id="notes"
+                type="text"
+                class="form-control"
+                value="No onions, please"
+              />
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+              <a href="/order-detail.html" class="btn btn-outline-primary me-2"
+                >Cancel</a
+              >
+              <button type="submit" class="btn btn-primary">
+                <svg
+                  class="bi pe-none me-2"
+                  width="16"
+                  height="16"
+                  fill="#FFFFFF"
+                >
+                  <use href="/assets/bootstrap-icons.svg#save" />
+                </svg>
+                Save item
+              </button>
+            </div>
+          </div>
+        </form>
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
