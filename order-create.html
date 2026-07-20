@@ -11,52 +11,59 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    {{> header}}
+    {{>header}}
     <main class="d-flex">
-      {{> nav}}
+      {{>nav}}
       <section class="content p-4 flex-grow-1">
-        <form class="form w-50">
-          <div class="card p-4">
-            <h5 class="card-title"><strong>Item</strong></h5>
-
-            <div class="mb-3">
-              <label for="menuItemId" class="form-label">Menu Item</label>
-              <select id="menuItemId" class="form-select">
-                <option value="0" selected>Select...</option>
-                <option value="1">Loaded Nachos</option>
-                <option value="2">Mozzarella Sticks</option>
-                <!-- ...all menu items -->
-              </select>
+        <form class="form w-100">
+          <div>
+            <div
+              class="d-flex justify-content-between pb-4 mb-5 border-bottom border-2"
+            >
+              <h2 class="form-label"><strong>New Order</strong></h2>
             </div>
 
-            <div class="mb-3">
-              <label for="price" class="form-label">Price</label>
-              <div class="form-label">$0.00</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="quantity" class="form-label">Quantity</label>
+            <div class="mb-4 w-75">
+              <label for="tableNumber" class="form-label">Table Number</label>
               <input
-                id="quantity"
+                id="tableNumber"
+                class="form-control"
                 type="number"
-                class="form-control"
-                value="0"
+                min="1"
+                placeholder="Enter table number"
               />
             </div>
 
-            <div class="mb-3">
-              <label for="notes" class="form-label">Notes</label>
-              <input
-                id="notes"
-                type="text"
+            <div class="mb-4 w-75">
+              <label for="orderNotes" class="form-label">Order Notes</label>
+              <textarea
+                id="orderNotes"
                 class="form-control"
-                placeholder="Enter any notes for this item (optional)"
-              />
+                rows="3"
+                placeholder="Enter notes for this order (optional)"
+              ></textarea>
             </div>
 
-            <div class="mb-3">
-              <label for="amount" class="form-label">Amount</label>
-              <div class="form-label">$0.00</div>
+            <div class="row g-3 mb-4 w-50">
+              <div class="col-12">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" class="form-select">
+                  <option value="PLACED" selected>Placed</option>
+                  <option value="PREPARING">Preparing</option>
+                  <option value="READY">Ready</option>
+                  <option value="SERVED">Served</option>
+                  <option value="CANCELLED">Cancelled</option>
+                </select>
+              </div>
+              <div class="col-13">
+                <label for="staff" class="form-label">Staff</label>
+                <select id="staff" class="form-select">
+                  <option value="">Select staff...</option>
+                  <option value="casey">Casey Nguyen</option>
+                  <option value="alex">Alex Porter</option>
+                  <option value="jamie">Jamie Lee</option>
+                </select>
+              </div>
             </div>
 
             <div class="d-flex justify-content-end mt-4">
