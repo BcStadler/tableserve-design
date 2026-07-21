@@ -36,11 +36,18 @@
           >
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
-              <input id="username" type="text" class="form-control" />
+              <input id="username" type="text" class="form-control" required />
+              <div class="invalid-feedback">Username is required</div>
             </div>
             <div class="mb-1">
               <label for="password" class="form-label">Password</label>
-              <input id="password" type="password" class="form-control" />
+              <input
+                id="password"
+                type="password"
+                class="form-control"
+                required
+              />
+              <div class="invalid-feedback">Password is required</div>
             </div>
             <div class="mb-4 form-text"><a href="#">Forgot It?</a></div>
             <div class="mb-3 d-grid gap-2">

@@ -15,7 +15,7 @@
     <main class="d-flex">
       {{> nav}}
       <section class="content p-4 flex-grow-1">
-        <form class="form w-50">
+        <form class="form w-50" novalidate data-success="/order-detail.html">
           <div
             class="d-flex justify-content-between pb-4 mb-3 border-bottom border-2"
           >
@@ -26,12 +26,12 @@
 
             <div class="mb-3">
               <label for="menuItemId" class="form-label">Menu Item</label>
-              <select id="menuItemId" class="form-select">
-                <option value="0">Select...</option>
-                <option value="1">Loaded Nachos</option>
-                <option value="2" selected>Mozzarella Sticks</option>
-                <!-- ...all menu items -->
+              <select id="menuItemId" class="form-select" required>
+                <option value="" selected>Select...</option>
+                <option value="Loaded Nachos">Loaded Nachos</option>
+                <option value="Cheese Curds">Cheese Curds</option>
               </select>
+              <div class="invalid-feedback">Menu item is required</div>
             </div>
 
             <div class="mb-3">
@@ -45,8 +45,10 @@
                 id="quantity"
                 type="number"
                 class="form-control"
-                value="2"
+                value="0"
+                min="1"
               />
+              <div class="invalid-feedback">Quantity must be at least 1</div>
             </div>
 
             <div class="mb-3">
@@ -85,5 +87,6 @@
       </section>
     </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/validation.js"></script>
   </body>
 </html>
